@@ -1,0 +1,84 @@
+
+header {
+    background:white;
+    height: 3.5em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* just change the header */
+header .inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+    height: 2em;
+    align-items: center;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 0.2em;
+}
+
+header nav ul li a {
+    color:white;
+    text-decoration: none;
+    background: rgb(65, 63, 63);
+    padding: 0.5em;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h2 {
+    font-size: larger;
+}
+.inner {
+   width: 75%;
+   margin: 0 auto;
+}
+
+.inner img{
+    height: 20px;
+}
+
+.hero {
+    background: rgb(65, 63, 63);
+    width: 500px;
+    background-size: cover;
+}
+
+/* CSS Grid */
+.gallery {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    gap: .5em;
+    padding: .5em .5em;
+}
+
+.gallery div {
+    background-color: grey;
+    min-height: 5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery div:hover {
+    filter: grayscale(0);
+}
+
+.gallery h3 {
+    color: white;
+    text-align: center;
+    display: none;
+}
+
+.gallery div:hover h3 {
+    display: block;
+}
+
+footer {
+    background-color: rgb(65, 63, 63);
+    color: white;
+}
