@@ -1,51 +1,141 @@
 
-header {
-    background:white;
-    height: 3.5em;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+/* Paralax image */
+.hero {
+    background-image: url("../images/image\ 1.png");
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:whitesmoke;
 }
 
-/* just change the header */
-header .inner {
+.herocontent{
+    width:40%;
+    align-content: center;
+    text-align: center;
+    margin: 0 auto;
+    padding: 13em;
+}
+
+.herocontent h1{
+    font-size: 2rem;
+    margin-top: 9px;
+}
+
+.herocontent p{
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-top: 2em;
+}
+
+.herocontent p a{
+    letter-spacing: 1px;
+    color: whitesmoke;
+    font-size:12px;
+    text-decoration: none;
+    border:solid;
+    padding:10px;
+}
+
+.herocontent img{
+    height: 1em;
+    margin-top: 4em;
+}
+
+.herocontent p a:hover {
+    background-color: #f27175;
+    color:white;
+    border:none;
+}
+
+header {
+    background-color: transparent;
+    height: 0%;
+}
+
+nav {
+    height:6em;
+    left:2em;
+    box-sizing: border-box;
+    background-color: transparent;
     display: flex;
     justify-content: space-between;
-    gap: 2em;
-    height: 2em;
     align-items: center;
+    gap: 1em;
+    width: 95%;
+    margin: 0 auto;
+    transition: .5s;
+}
+
+nav .logo img {
+    width: 30em;
+}
+
+#logo_hover:hover {
+    content:url("../images/canberra\ modern\ FILL\ W.png");
+
 }
 
 header nav ul li {
     display: inline;
-    margin-left: 0.2em;
+    margin-right: 0.2em;
 }
 
 header nav ul li a {
-    color:white;
+    color:whitesmoke;
     text-decoration: none;
-    background: rgb(65, 63, 63);
+    background: transparent;
+    padding: 0.5em;
+}
+
+header nav ul li:hover a {
+    color:whitesmoke;
+    text-decoration:underline;
+    text-decoration-thickness:5px;
+    text-decoration-color: #f27175;
+    font-weight:lighter;
     padding: 0.5em;
 }
 
 body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Futura", "Trebuchet MS", Arial, sans-serif;
 }
 
 h2 {
     font-size: larger;
+    font-weight: bolder;
+    letter-spacing: .2em;
 }
 .inner {
-   width: 75%;
+   width: 95%;
    margin: 0 auto;
 }
 
 .inner img{
-    height: 20px;
+    height: 95%;
 }
 
-.hero {
-    background: rgb(65, 63, 63);
-    width: 500px;
-    background-size: cover;
+body, html {
+    height: 100%;
+}
+
+.sec1 p{
+    background-color: white;
+    height: 10em;
+    font-size:1.5em;
+    justify-content:center;
+    text-align: center;
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    line-height:32px;
+}
+
+.sec1 b{
+    font-weight: bolder;
+    color: #f27175;
 }
 
 /* CSS Grid */
