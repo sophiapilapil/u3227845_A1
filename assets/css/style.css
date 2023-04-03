@@ -1,4 +1,31 @@
 
+header {
+    background-color: transparent;
+    height: 0%;
+}
+
+body {
+    font-family: "Futura", "Trebuchet MS", Arial, sans-serif;
+    line-height: 2em;
+    background-color: whitesmoke;
+}
+
+h2 {
+    font-size: larger;
+    font-weight: bolder;
+    letter-spacing: 2px;
+}
+.inner {
+   width: 75%;
+   margin: 0 auto;
+   margin-top: 100px;
+}
+
+body, html {
+    height: 100%;
+}
+
+
 /* Paralax image */
     .hero {
         background-image: url("../images/event1.jpg");
@@ -9,6 +36,7 @@
         background-size: cover;
         color:whitesmoke;
     }
+
 
 /* Responsive hero text */
     @media (min-width:360px) {
@@ -24,12 +52,28 @@
             line-height: 25px;
             margin-top: 3px;
         }
+        .herocontent .button1{
+            margin-top: 10px;
+        }
+        .herocontent p{
+            font-size: 12px;
+            letter-spacing: 3px;
+            margin-top: 2em;
+        }
+        .herocontent img{
+            height: 2em;
+            margin-top: 4em;
+        }
     }
 
     @media (min-width:601px) {
         .herocontent h1{
             font-size: 25px;
             margin-top: 9px;
+        }
+        .herocontent img{
+            height: 1.5em;
+            margin-top: 4em;
         }
     }
 
@@ -39,124 +83,187 @@
         }
         .herocontent h1{
             font-size: 2rem;
-            line-height:30px;
+            line-height:40px;
             margin-top: 9px;
         }
-        
+        .herocontent img{
+            height: 1em;
+            margin-top: 3.5em;
+        } 
     }
 
-.herocontent p{
-    font-size: 12px;
-    letter-spacing: 3px;
-    margin-top: 2em;
-}
-
-.herocontent img{
-    height: 1em;
-    margin-top: 4em;
-}
-
 /* Button Boxed */
-.button1 a{
-    letter-spacing: 1px;
-    color: whitesmoke;
-    background-color: transparent;
-    font-size:12px;
-    text-decoration: none;
-    border:solid;
-    padding:10px;
-}
+    .button1 a{
+        letter-spacing: 1px;
+        color: whitesmoke;
+        background-color: transparent;
+        font-size:12px;
+        text-decoration: none;
+        border:solid;
+        padding:10px;
+    }
 
-.button1 a:hover {
-    background-color: #f27175;
-    color:white;
-    border:none;
-}
+    .button1 a:hover {
+        background-color: #f27175;
+        color:white;
+        border:none;
+    }
 
-header {
-    background-color: transparent;
-    height: 0%;
-}
-
-nav {
-    height:6em;
-    left:2em;
-    box-sizing: border-box;
-    background-color: transparent;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1em;
-    width: 95%;
-    margin: 0 auto;
-    transition: .5s;
-}
 
 /* Responsive navbar*/
-nav .logo img {
-    width: 30em;
-}
+        nav {
+            height:6em;
+            position: relative;
+            box-sizing: border-box;
+            background-color: transparent;
+            background-size: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1em;
+            width: 95%;
+            margin: 0 auto;
+            transition: .5s ease;
+        }
+        nav .logo img {
+            width: 20em;
+            display: inline-block;
+        }
+        #logo_hover:hover {
+            content:url("../images/canberra\ modern\ FILL\ W.png");
+        }
+        .menu li {
+            display: inline;
+            margin-right: 0.2em;
+        }
+        nav ul li a {
+            color:whitesmoke;
+            text-decoration: none;
+            background: transparent;
+            padding: 0.5em;
+        }
+        nav ul li:hover a {
+            color:whitesmoke;
+            text-decoration:underline;
+            text-decoration-thickness:5px;
+            text-decoration-color: #f27175;
+            font-weight:lighter;
+            padding: 0.5em;
+        }
+        .nav .menu-btn i{
+            color: whitesmoke;
+            font-size: 22px;
+            cursor: pointer;
+            display: none;
+        }
+        input[type="checkbox"]{
+        display: none;
+        }
 
-#logo_hover:hover {
-    content:url("../images/canberra\ modern\ FILL\ W.png");
+        @media (max-width:800px) {
+            nav .menu-btn i{
+                display: block;
+              }
+            #click:checked ~ .menu-btn i:before{
+                content: "\f00d";
+            }
+            .menu{
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                background: rgb(18,18,18);
+                height: 100%;
+                width: 100%;
+                text-align: center;
+                display: block;
+            }
+            #click:checked ~ ul{
+                left: 0;
+            }
+            .menu li{
+                width: 100%;
+                margin: 40px 0;
+            }
+            nav ul li a{
+                width: 100%;
+                margin-left: 0%;
+                display: block;
+                font-size: 12px;
+                transition: 0.6s ease;
+            }
+            #click:checked ~ ul li a{
+                margin-left: 0px;
+            }
+            .menu a:active{
+                background: none;
+                color: #f27175;
+            }
+        }
+        
 
-}
 
-header nav ul li {
-    display: inline;
-    margin-right: 0.2em;
-}
+/*Responsive Text*/
+    @media (min-width:360px) {
+        p {
+            font-size: 12px;
+            line-height: normal;
+        }
+        h3 {
+            font-size: 12px;
+        }
+    }
 
-header nav ul li a {
-    color:whitesmoke;
-    text-decoration: none;
-    background: transparent;
-    padding: 0.5em;
-}
+    @media (min-width:601px) {
+        p{
+            font-size: 15px;
+        }
+        h3{
+            font-size: normal;
+        }
+    }
 
-header nav ul li:hover a {
-    color:whitesmoke;
-    text-decoration:underline;
-    text-decoration-thickness:5px;
-    text-decoration-color: #f27175;
-    font-weight:lighter;
-    padding: 0.5em;
-}
 
-body {
-    font-family: "Futura", "Trebuchet MS", Arial, sans-serif;
-}
+    /*Responsive Sec 1*/
+    @media (min-width:360px) {
+        .sec1 p{
+            background-color: whitesmoke;
+            height: 10em;
+            font-size:12px;
+            justify-content:center;
+            text-align: center;
+            width: 40%;
+            margin: 0 auto;
+            margin-top: 2em;
+            margin-bottom: 2em;
+            line-height:12px;
+        }
+        .sec1 .button1 a{
+            color:rgb(18, 18, 18);
+            align-content: center;
+            text-align: center;
+            margin-left: 30%;
+        }
+    }
 
-h2 {
-    font-size: larger;
-    font-weight: bolder;
-    letter-spacing: 3px;
-}
-.inner {
-   width: 95%;
-   margin: 0 auto;
-}
+    @media (min-width:601px) {
+        .sec1 p{
+            font-size:18px;
+            line-height:20px;
+        }
+        .sec1 .button1 a{
+            margin-left: 40%;
+        }
+    }
 
-.inner img{
-    height: 95%;
-}
-
-body, html {
-    height: 100%;
-}
-
-.sec1 p{
-    background-color: white;
-    height: 10em;
-    font-size:1.5em;
-    justify-content:center;
-    text-align: center;
-    width: 40%;
-    margin: 0 auto;
-    margin-top: 2em;
-    margin-bottom: 2em;
-    line-height:32px;
-}
+    @media (min-width:1280px) {
+        .sec1 p{
+            font-size:1.5em;
+            line-height:32px;
+        }
+        .sec1 .button1 a{
+            margin-left: 43%;
+        }
+    }
 
 .sec1 b{
     font-weight: bolder;
@@ -170,30 +277,198 @@ body, html {
         gap: .5em;
         padding: .5em .5em;
     }
-
+        .gallery1 {
+            background-image: url("../images/p.event1.png");
+            background-size: cover;
+        }
+        .gallery2 {
+            background-image: url("../images/p.event2.png");
+            background-size: cover;
+        }
+        .gallery3 {
+            background-image: url("../images/p.event3.png");
+            background-size: cover;
+        }
+        .gallery4 {
+            background-image: url("../images/p.event4.jpeg");
+            background-size: cover;
+        }
+        .gallery5 {
+            background-image: url("../images/p.event5.png");
+            background-size: cover;
+        }
+        .gallery5 {
+            background-image: url("../images/p.event5.png");
+            background-size: cover;
+        }
+        .gallery6 {
+            background-image: url("../images/p.event6.jpeg");
+            background-size: cover;
+        }
+        .gallery7 {
+            background-image: url("../images/p.event7.png");
+            background-size: cover;
+        }
+        .gallery8 {
+            background-image: url("../images/p.event8.png");
+            background-size: cover;
+        }
     .gallery div {
         background-color: grey;
-        min-height: 5em;
+        height:15em;
         display: flex;
         align-items: center;
         justify-content: center;
+        filter:grayscale(100);
     }
-
     .gallery div:hover {
-        filter: grayscale(0);
+        filter: grayscale(0)
     }
-
     .gallery h3 {
         color: white;
         text-align: center;
         display: none;
     }
-
     .gallery div:hover h3 {
         display: block;
+        font-weight: bolder;
+    }
+    .inner .button1 a{
+        color:rgb(18, 18, 18);
+        display: flex;
+        float: right;
+        padding: 5px 10px;
     }
 
-footer {
-    background-color: rgb(65, 63, 63);
-    color: white;
-}
+/*Three column grid*/
+    .three-grid {
+        margin-top: 10px;
+        width: 90%;
+        align-content: center;
+        display: grid;
+        grid-template-columns: 33.3% 33.3% 33.3%;
+        gap: 3em;
+    }
+
+    .three-grid div {
+        background-color: black;
+        background-position: relative;
+        height: 17em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+        .three-grid .edwina1 {
+            background-image: url(../images/edwina.jpeg);
+            background-size: cover;
+            height:20em;
+        }
+        .three-grid .amy1 {
+            background-image: url(../images/amy.jpeg);
+            background-size: cover;
+            height:20em;
+        }
+        .three-grid .rachel1 {
+            background-image: url(../images/rachel.png);
+            background-size: cover;
+            height:20em;
+        }
+
+/*Paralax*/
+    .sec2 {
+        margin-top: 100px;
+        background-image: url(../images/people1.png);
+        background-attachment: fixed;
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .sec2 .herocontent h1{
+        color:white;
+    }
+
+    @media (min-width:800px) {
+        .our-mission .hero {
+            background-image: url(../images/about1.jpeg);
+        }
+    }
+    .our-mission .herocontent {
+        background-color: #7484c4;
+    }
+
+    @media (max-width:601px) {
+        .next-mis .hero {
+            background-image:none;
+        }
+    }
+    .next-mis .herocontent {
+        background-color:#fce484;
+        color: rgb(18, 18, 18);
+    }
+
+
+/*Responsive Footer*/
+    @media (min-width:601px) {
+        footer {
+            background-color: rgb(18, 18, 18);
+            background-size: cover;
+            color: whitesmoke;
+            display: grid;
+            grid-template-columns: 50% 12% 18% 8% 10%;
+            gap:.5em;
+            padding: .5em .5em;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        footer p{
+            font-weight: normal;
+            font-size: 10px;
+        }
+        footer img {
+            height:3em;
+        }
+        footer div ul li a {
+            display: inline;
+            color:whitesmoke;
+            text-decoration: none;
+            background: transparent;
+            font-weight: normal;
+        }
+        footer div ul li a:hover {
+            display: inline;
+            color:#7484c4
+        }
+        footer .footer_img {
+            background-image: url("../images/civic\ pool.png");
+            background-size: cover;
+            background-repeat: none;
+        }
+    }
+
+    @media (max-width:1280px){
+        footer .footer_img {
+            display: none;
+        }
+    }
+
+    @media (min-width:360px){
+        footer {
+            background-color: rgb(18, 18, 18);
+            background-size: cover;
+            color: whitesmoke;
+            padding:5em;
+            left:2em;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        footer img {
+            height:3em;
+        }
+        footer a {
+            color:whitesmoke;
+            text-decoration: none;
+            background: transparent;
+            padding: 0.5em;
+            font-weight: normal;
+        }
+    }
