@@ -136,13 +136,13 @@ body, html {
             display: inline;
             margin-right: 0.2em;
         }
-        nav ul li a {
+        .menu li a {
             color:whitesmoke;
             text-decoration: none;
             background: transparent;
             padding: 0.5em;
         }
-        nav ul li:hover a {
+        .menu li:hover a {
             color:whitesmoke;
             text-decoration:underline;
             text-decoration-thickness:5px;
@@ -150,21 +150,70 @@ body, html {
             font-weight:lighter;
             padding: 0.5em;
         }
-        .nav .menu-btn i{
-            color: whitesmoke;
-            font-size: 22px;
+        .menu{
+            max-height: 0;
+            transition: max-height .5s ease-out;
+        }
+        .menu-btn{
             cursor: pointer;
+            float: right;
+            right: 0;
+            padding: 3em;
+        }
+        .menu-line {
+            background: whitesmoke;
+            display: block;
+            height: 2px;
+            position: relative;
+            width: 24px;
+        }
+        .menu-line::before,
+        .menu-line::after{
+            background:whitesmoke;
+            content: '';
+            display: block;
+            height: 100%;
+            position: absolute;
+            transition: all .2s ease-out;
+            width: 100%;
+        }
+        .menu-line::before{
+            top: 5px;
+        }
+        .menu-line::after{
+            top: -5px;
+        }
+        .side-menu {
             display: none;
         }
-        input[type="checkbox"]{
-        display: none;
-        }
 
-        @media (max-width:800px) {
-            nav .menu-btn i{
+        /*Hamburger turns to "X"*/
+            .side-menu:checked ~ nav{
+                max-height: 100%;
+            }
+            .side-menu:checked ~ .menu-btn .menu-line {
+                background: transparent;
+            }
+            .side-menu:checked ~ .menu-btn .menu-line::before {
+                transform: rotate(-45deg);
+                top:0;
+            }
+            .side-menu:checked ~ .menu-btn .menu-line::after {
+                transform: rotate(45deg);
+                top:0;
+            }
+        
+            @media (min-width:900px) {
+                .menu-btn{
+                    display: none;
+                }
+            }
+
+        @media (max-width:900px) {
+            nav .menu-btn{
                 display: block;
               }
-            #click:checked ~ .menu-btn i:before{
+            #click:checked ~ .menu-btn:before{
                 content: "\f00d";
             }
             .menu{
