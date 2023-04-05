@@ -201,7 +201,6 @@ body, html {
                 transform: rotate(45deg);
                 top:0;
             }
-        
             @media (min-width:900px) {
                 .menu-btn{
                     display: none;
@@ -217,20 +216,18 @@ body, html {
             #click:checked ~ .menu-btn:before{
                 content: "\f00d";
             }
-
             .menucontainer{
                 position: fixed;
                 top: 0px;
                 left: -100%;
                 background: rgb(18,18,18);
                 height: 100%;
-                padding-top: 80px;
+                padding-top: 200px;
                 width: 100%;
                 text-align: center;
                 display: block;
                 z-index: 80;
             }
-
             .side-menu:checked ~ .menucontainer{
                 left: 0;
             }
@@ -251,6 +248,10 @@ body, html {
             .menu a:active{
                 background: none;
                 color: #f27175;
+            }
+
+            .menu .button1 {
+                display: none;
             }
         }
         
@@ -382,6 +383,9 @@ body, html {
         color: white;
         text-align: center;
         display: none;
+        background-color: #f27175;
+        padding:.5em;
+        width: 80%;
     }
     .gallery div:hover h3 {
         display: block;
@@ -400,14 +404,14 @@ body, html {
         width: 90%;
         align-content: center;
         display: grid;
-        grid-template-columns: 33.3% 33.3% 33.3%;
+        grid-template-columns: 1fr 1fr 1fr;
         gap: 3em;
     }
 
     .three-grid div {
         background-color: black;
         background-position: relative;
-        height: 17em;
+        height: 12rem;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -424,7 +428,7 @@ body, html {
         }
         .three-grid .rachel1 {
             background-image: url(../images/rachel.png);
-            background-size: cover;
+            background-size: contain;
             height:20em;
         }
 
@@ -450,6 +454,7 @@ body, html {
         background-color: #7484c4;
     }
 
+
     @media (max-width:601px) {
         .next-mis .hero {
             background-image:none;
@@ -459,6 +464,13 @@ body, html {
         background-color:#fce484;
         color: rgb(18, 18, 18);
     }
+    .next-mis .herocontent .button1 a{
+        color: rgb(18,18,18);
+    }
+    .next-mis .herocontent .button1 a:hover{
+        color: whitesmoke;
+    }
+
 
 
 /*Responsive Footer*/
