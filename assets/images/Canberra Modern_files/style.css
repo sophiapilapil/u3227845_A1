@@ -3,93 +3,27 @@ header {
     background-color: transparent;
     height: 0%;
 }
+
 body {
     font-family: "Futura", "Trebuchet MS", Arial, sans-serif;
     line-height: 2em;
     background-color: whitesmoke;
 }
-h1{
-    font-size: 18px;
-    line-height: 25px;
-    text-transform: uppercase;
-}
+
 h2 {
     font-size: larger;
     font-weight: bolder;
-    line-height: 18px;
-    letter-spacing: 0px;
-    text-transform: uppercase;
-}
-/*Captions*/ h4{
-    font-size:12px;
-    font-style: italic;
-    line-height: 13px;
+    letter-spacing: 2px;
 }
 .inner {
    width: 75%;
    margin: 0 auto;
    margin-top: 100px;
-   margin-bottom: 100px;
 }
+
 body, html {
     height: 100%;
 }
-
-/* Button Boxed */
-    .button1 a{
-        letter-spacing: 1px;
-        color: whitesmoke;
-        background-color: transparent;
-        font-size:12px;
-        text-decoration: none;
-        border:solid;
-        padding:10px;
-    }
-
-    .button1 a:hover {
-        background-color: #f27175;
-        color:white;
-        border:none;
-        transition: 0.5s ease-in-out;
-    }
-
-/*VIEW MORE BUTTON*/
-    .abt-cbr .herocontent{
-        padding: 0;
-        padding-top: 6em;
-        padding-bottom: 6em;
-    }
-    .abt-cbr label{
-        margin-top: 10px;
-        display: inline-block;
-        font-style: italic;
-    }
-    .abt-cbr label:hover {
-        color:whitesmoke;
-        text-decoration:underline;
-        text-decoration-thickness:5px;
-        color:#f27175;
-        text-decoration-color: #f27175;
-        font-weight:lighter;
-    }
-    #view-more {
-        display: none;
-    }
-    .hidden {
-        display: none;
-        transition: 0.5 linear;
-    }
-    #view-more:checked ~ .hidden {
-        display: block;
-    }
-    #view-more:checked ~ label {
-        visibility: hidden;
-    }
-    #view-more:checked ~ label:after {
-        content: 'VIEW LESS';
-        display: block;
-        visibility: visible;
-    }
 
 
 /* Paralax image */
@@ -107,137 +41,177 @@ body, html {
 /* Responsive hero text */
     @media (min-width:0px) {
         .herocontent{
-            width:50%;
+            width:40%;
             align-content: center;
             text-align: center;
             margin: 0 auto;
             padding: 6em;
         }
         .herocontent h1{
-            text-transform: none;
+            font-size: 18px;
+            line-height: 25px;
+            margin-top: 3px;
         }
         .herocontent .button1{
             margin-top: 10px;
         }
         .herocontent p{
-            font-size: 10px;
+            font-size: 12px;
             letter-spacing: 3px;
+            margin-top: 5em;
         }
         .herocontent img{
             height: 2em;
             position: absolute;
             bottom: 10px;
         }
-        .herocontent .textbox{
-            padding: 2em;
+    }
+
+    @media (min-width:601px) {
+        .herocontent h1{
+            font-size: 25px;
+            margin-top: 3px;
         }
     }
 
-    @media (min-width:900px) {
-        .herocontent{
-            width:40%;
-        }
+    @media (min-width:1280px) {
         .herocontent h1{
             font-size: 2rem;
             line-height:40px;
             margin-top: 9px;
         }
-        .herocontent .textbox{
-            padding: 3em;
-        }
     }
 
-/*MORE PARALXES*/
-    /*Home Page*/
-        .sec2 {
+/*More Paralax*/
+    .sec2 {
+        margin-top: 100px;
+        background-image: url(../images/people1.png);
+        background-attachment: fixed;
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .sec2 .herocontent h1{
+        color:white;
+    }
+
+    #our-mission .herocontent{
+        background-color: #7484c4;
+    }
+    #our-mission {
+        background-image: url(../images/people1.png);
+    }
+
+    @media (min-width:601px) {
+        .abt-cbr {
             margin-top: 100px;
             background-image: url(../images/people1.png);
             background-attachment: fixed;
             background-size:cover;
             background-repeat: no-repeat;
             background-position: center;
+            color: whitesmoke;
         }
-        .sec2 .herocontent h1{
-            color:white;
+    .abt-cbr .herocontent p{
+            font-size: 18px;
+            letter-spacing: normal;
+            margin-top: 1em;
         }
-    /*About Page*/
-        #our-mission {
+    }
+    @media (max-width:601px) {
+        .abt-cbr {
+            margin-top: 100px;
             background-image: url(../images/people1.png);
+            background-attachment: fixed;
+            background-size:cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: whitesmoke;
         }
-        @media (min-width:0px) {
-            .abt-cbr {
-                margin-top: 100px;
-                background-image: url(../images/img1.png);
-                background-attachment: fixed;
-                background-size:cover;
-                background-repeat: no-repeat;
-                background-position: center;
-                color: whitesmoke;
-            }
-            .abt-cbr .herocontent p{
-                font-size: 12px;
-                letter-spacing: normal;
-                margin-top: 1em;
-            }
-            #our-mission .herocontent .textbox {
-                background-color: #7484c4;
-            }
-            #our-mission .herocontent h1{
-                font-size: 13px;
-                line-height: 25px;
-                margin: 0 auto;
-                padding: 1em;
-            }
-            #our-mission .herocontent p{
-                font-size: 13px;
-            }
+    .abt-cbr .herocontent p{
+            font-size: 12px;
+            letter-spacing: normal;
+            margin-top: 1em;
         }
-        @media (min-width:601px) {
-            .abt-cbr .herocontent{
-                width: 40%;
-            }
-            .abt-cbr .herocontent p{
-                font-size: 18px;
-            }
-            #our-mission .herocontent h1{ 
-                font-size: 25px;
-                line-height: 30px;
-                margin-top: 3px;
-            }
-        }
+    }
 
-    /*Events Page*/
-        @media (min-width:0px) {
-            #next-event .herocontent {
-                color: rgb(18, 18, 18);
-            }
-            #next-event .herocontent h4 {
-                display: none;
-            }
-            #next-event .herocontent h2 {
-                font-size: 12px;
-            }
-            #next-event .button1 a{
-                background-color: #f27175;
-                border: none;
-            }
-            #next-event .button1 a:hover{
-                background-color: rgb(18, 18, 18);
-                border: none;
-            }
-            #next-event .herocontent .textbox{
-                background-color: #fce484;
-            }
+
+    @media (max-width:601px) {
+        .next-mis .hero {
+            background-image:none;
         }
-        @media (min-width:900px) {
-            #next-event .herocontent h4 {
-                display: block;
-                font-size: 16px;
-            }
-            #next-event .herocontent h2 {
-                font-size: 18px;
-            }
-        }
+    }
+    .next-mis .herocontent {
+        background-color:#fce484;
+        color: rgb(18, 18, 18);
+    }
+    .next-mis .herocontent .button1 a{
+        color: rgb(18,18,18);
+    }
+    .next-mis .herocontent .button1 a:hover{
+        color: whitesmoke;
+    }
+
+
+/*VIEW MORE BUTTON*/
+    .abt-cbr label {
+        letter-spacing: 1px;
+        color: whitesmoke;
+        font-size:12px;
+        text-decoration: none;
+        font-style: italic;
+        padding:1px;
+        margin: 5px;
+        cursor: pointer;
+    }
+    .abt-cbr label:hover {
+        color: #f27175;
+        cursor: pointer;
+    }
+    /*open*/
+    .hidden {
+        display: none;
+    }
+    
+    .view-more:not(:checked) ~ label,
+    .view-more:checked ~ .hidden {
+        display: block;
+    }
+    
+    .view-more,
+    .view-more:checked ~ label {
+        display: none;
+    }
+
+    /*close*/
+    .view-less:not(:checked) ~ label,
+    .view-less:checked ~ .hidden {
+        display: block;
+    }
+    
+    .view-less,
+    .view-less:checked ~ label {
+        display: none;
+    }
+
+
+/* Button Boxed */
+    .button1 a{
+        letter-spacing: 1px;
+        color: whitesmoke;
+        background-color: transparent;
+        font-size:12px;
+        text-decoration: none;
+        border:solid;
+        padding:10px;
+    }
+
+    .button1 a:hover {
+        background-color: #f27175;
+        color:white;
+        border:none;
+    }
+
 
 /* Responsive navbar*/
         nav {
@@ -495,6 +469,7 @@ body, html {
                 background-size: cover;
             }
         .gallery div {
+            background-color:#f27175;
             height:15em;
             display: flex;
             align-items: center;
@@ -515,22 +490,17 @@ body, html {
         .inner .button1 a{
             color:rgb(18, 18, 18);
             display: flex;
-            float: left;
+            float: right;
             padding: 5px 10px;
         }
-        .events-grid div.button1 {
-            padding-left: 0;
-        }
     }
+
     @media (min-width:601px) {
         .gallery {
             display: grid;
             grid-template-columns: 25% 25% 25% 25%;
             gap: .5em;
             padding: .5em .5em;
-        }
-        .gallery div {
-            filter:grayscale(100);
         }
     }
     @media (min-width:1280px) {
@@ -551,148 +521,53 @@ body, html {
     @media (min-width:0px) {
         .three-column {
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
             gap: 2em;
             margin-top: 3em;
         }
         .three-column div {
             align-items: center;
             justify-content: center;
+            padding: 1em;
         }
-        .three-column .edwina .img {
+        .three-column .edwina {
+            background-image: url(../images/edwina.jpeg);
+            background-size: cover;
+            height:5em;
+            padding:5em;
+        }
+        .three-column .amy {
+            background-image: url(../images/amy.jpeg);
+            background-size: cover;
+            height:5em;
+            padding:5em;
+        }
+        .three-column .rachel {
+            background-image: url(../images/rachel.png);
+            background-size: cover;
+            height:5em;
+            padding:5em;
+        }
+    }
+
+    @media (min-width:900px) {
+        .three-column .edwina {
             background-image: url(../images/edwina.jpeg);
             background-size: cover;
             height:10em;
             padding:5em;
         }
-        .three-column .amy .img {
+        .three-column .amy {
             background-image: url(../images/amy.jpeg);
             background-size: cover;
             height:10em;
             padding:5em;
         }
-        .three-column .rachel .img {
+        .three-column .rachel {
             background-image: url(../images/rachel.png);
             background-size: cover;
-            background-repeat: none;
             height:10em;
             padding:5em;
-        }
-    }
-    @media (min-width:600px) {
-        .three-column {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 2em;
-            margin-top: 3em;
-        }
-    }
-/*Two-column Grid*/
-    @media (min-width:0px) {
-        .two-column {
-            display: grid;
-            grid-template-columns: 1fr 3fr;
-            gap: 2em;
-        }   
-        .two-column div {
-            display: flex;
-            padding: .5em;
-        }
-        .two-column .column-head {
-            justify-content: right;
-            top:0;
-            text-align: right;
-            color: #7484c4;
-            display:inline;
-        }
-        .two-column .patron-content{
-        display: inline;
-        }
-        .two-column .patron-content .button1 {
-            left:0;
-            padding:0px;
-            margin-top: 2em;
-        }
-        .two-column .patron-content .button1:hover {
-            color: whitesmoke;
-        }
-        .two-column ul li a{
-            text-decoration: none;
-            color: rgb(18, 18, 18);
-        }
-        .two-column ul li a:hover{
-            text-decoration: none;
-            color:#f27175;
-        }
-    }
-    @media (min-width:780px) {
-        .two-column .patron-content p{
-            column-count: 2;
-            column-gap: 3em;
-        }
-    }
-
-/*Events Grid*/ 
-    @media (min-width:0px) {
-        .events-grid {
-            display: grid;
-            grid-template-columns: 50% 50%;
-            gap: 2em;
-            margin-top: 3em;
-        }
-        .events-grid div {
-            align-items: center;
-            justify-content: center;
-            padding: 1em;
-            height: 15em;
-        }
-        .events-grid div p {
-            display: none;
-        }
-        .events-grid div h2{
-            line-height: 18px;
-        }
-        .events-grid .n-event1 {
-            background-image: url(../images/n.event1.png);
-            background-size: cover;
-            background-repeat: none;
-        }
-        .events-grid .n-event1text {
-            background-color: #fce484;
-        }
-        .events-grid .n-event2 {
-            background-image: url(../images/n.event2.jpeg);
-            background-size: cover;
-        }
-        .events-grid .n-event3 {
-            background-image: url(../images/n.event3.png);
-            background-size: cover;
-        }
-        .events .button1 {
-            position: absolute;
-            bottom: 10px;
-        }
-    }
-    @media (min-width:900px) {
-        .events-grid {
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            gap: 2em;
-            margin-top: 3em;
-        }
-        .events-grid div p {
-            display: block;
-        }
-        .events-grid .n-event1 {
-            background-image: url(../images/n.event1.png);
-            background-size: cover;
-            background-repeat: none;
-            grid-column-start: 1;
-            grid-column-end: 3;
-        }
-        .events-grid .n-event1text {
-            background-color: #fce484;
-            grid-column-start: 3;
-            grid-column-end: 5;
         }
     }
 
