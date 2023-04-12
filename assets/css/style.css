@@ -763,12 +763,39 @@ body, html {
             position: absolute;
             bottom: 10px;
         }
-        #buildings-content .n-event-text div p{
+        #buildings-content div {
+            height: 10em;
+        }
+        .events-grid #at-risk {
+            background-color: #eca484;
+        }
+        #buildings-content div p{
             display: block;
         }
-        .events-grid .build-1 {
-            background-image: url(../images/build1.png);
-        }
+            .events-grid .build-1 {
+                background-image: url(../images/build1.png);
+            }
+            .events-grid .build-2 {
+                background-image: url(../images/build2.jpeg);
+            }
+            .events-grid .build-3 {
+                background-image: url(../images/build3.jpeg);
+            }
+            .events-grid .build-4 {
+                background-image: url(../images/build4.jpg);
+            }
+            .events-grid .build-5 {
+                background-image: url(../images/build5.jpeg);
+            }
+            .events-grid .build-6 {
+                background-image: url(../images/build6.jpeg);
+            }
+            .events-grid .build-7 {
+                background-image: url(../images/build7.jpeg);
+            }
+            .events-grid .build-8 {
+                background-image: url(../images/build8.jpeg);
+            }
     }
     
     @media (min-width:900px) {
