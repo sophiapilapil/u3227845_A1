@@ -20,11 +20,12 @@ h2 {
     letter-spacing: 0px;
     text-transform: uppercase;
 }
-/*Captions*/ h4{
-    font-size:12px;
-    font-style: italic;
-    line-height: 13px;
-}
+/*Captions*/ 
+    h4{
+        font-size:12px;
+        font-style: italic;
+        line-height: 20px;
+    }
 .inner {
    width: 75%;
    margin: 0 auto;
@@ -39,18 +40,20 @@ body, html {
     .button1 a{
         letter-spacing: 1px;
         color: whitesmoke;
+        text-align: center;
         background-color: transparent;
         font-size:12px;
         text-decoration: none;
         border:solid;
         padding:10px;
+        line-height: 13px;
     }
 
     .button1 a:hover {
         background-color: #f27175;
         color:white;
         border:none;
-        transition: 0.5s ease-in-out;
+        transition: 0.1s ease-in-out;
     }
 
 /*VIEW MORE BUTTON*/
@@ -107,7 +110,7 @@ body, html {
 /* Responsive hero text */
     @media (min-width:0px) {
         .herocontent{
-            width:50%;
+            width:55%;
             align-content: center;
             text-align: center;
             margin: 0 auto;
@@ -129,7 +132,7 @@ body, html {
             bottom: 10px;
         }
         .herocontent .textbox{
-            padding: 2em;
+            padding: 1em;
         }
     }
 
@@ -192,7 +195,7 @@ body, html {
                 font-size: 13px;
             }
         }
-        @media (min-width:601px) {
+        @media (min-width:768px) {
             .abt-cbr .herocontent{
                 width: 40%;
             }
@@ -229,7 +232,7 @@ body, html {
                 background-color: #fce484;
             }
         }
-        @media (min-width:900px) {
+        @media (min-width:768px) {
             #next-event .herocontent h4 {
                 display: block;
                 font-size: 16px;
@@ -238,6 +241,40 @@ body, html {
                 font-size: 18px;
             }
         }
+
+    /*Buildings Page*/
+    @media (min-width:0px) {
+        #buildings {
+            background-image: url(../images/build1.png);
+        }
+        #buildings .herocontent {
+            color: whitesmoke
+        }
+        #buildings .herocontent h4 {
+            display: none;
+        }
+        #buidings .herocontent h2 {
+            font-size: 12px;
+        }
+        #buildings .button1 a{
+            background-color: #f27175;
+            border: none;
+        }
+        #buildings .herocontent .textbox{
+            background-color: #eca484;
+        }
+    }
+    @media (min-width:768px) {
+        #buildings .herocontent h4 {
+            display: block;
+            font-size: 16px;
+            margin-top: 2em;
+        }
+        #buildings .herocontent h2 {
+            font-size: 18px;
+        }
+    }
+
 
 /* Responsive navbar*/
         nav {
@@ -254,10 +291,7 @@ body, html {
             margin: 0 auto;
             transition: .5s ease;
         }
-        nav .logo img {
-            width: 20em;
-            display: inline-block;
-        }
+        
         #logo_hover:hover {
             content:url("../images/canberra\ modern\ FILL\ W.png");
         }
@@ -314,6 +348,7 @@ body, html {
         .side-menu {
             display: none;
         }
+        
 
         /*Hamburger turns to "X"*/
             .side-menu:checked ~ nav{
@@ -337,6 +372,10 @@ body, html {
             }
 
         @media (max-width:900px) {
+            nav .logo img {
+                width: 15em;
+                display: inline-block;
+            }
             nav .menu-btn{
                 display: block;
                 z-index: 100;
@@ -380,6 +419,19 @@ body, html {
             }
             .menu .button1 {
                 display: none;
+            }
+            .menu .nav-hidden{
+                display: block;
+            }
+        }
+
+        @media (min-width:900px) {
+            .menu .nav-hidden {
+                display: none;
+            }
+            nav .logo img {
+                width: 20em;
+                display: inline-block;
             }
         }
         
@@ -428,7 +480,7 @@ body, html {
         }
     }
 
-    @media (min-width:601px) {
+    @media (min-width:768px) {
         .sec1 p{
             font-size:18px;
             width: 50%;
@@ -437,7 +489,7 @@ body, html {
         }
     }
 
-    @media (min-width:1280px) {
+    @media (min-width:1024px) {
         .sec1 p{
             font-size:1.5em;
             line-height:32px;
@@ -522,7 +574,7 @@ body, html {
             padding-left: 0;
         }
     }
-    @media (min-width:601px) {
+    @media (min-width:768px) {
         .gallery {
             display: grid;
             grid-template-columns: 25% 25% 25% 25%;
@@ -533,7 +585,7 @@ body, html {
             filter:grayscale(100);
         }
     }
-    @media (min-width:1280px) {
+    @media (min-width:1024px) {
         .gallery h3 {
             color: white;
             text-align: center;
@@ -554,6 +606,9 @@ body, html {
             grid-template-columns: 1fr;
             gap: 2em;
             margin-top: 3em;
+        }
+        .three-column h1{
+            margin-top: 2em;
         }
         .three-column div {
             align-items: center;
@@ -578,8 +633,48 @@ body, html {
             height:10em;
             padding:5em;
         }
+
+        .past .three-column{
+            row-gap: 5em;
+        }
+        .past .three-column div{
+            height: 15em;
+            background-size: cover;
+            align-items: center;
+            justify-content: center;
+        }
+        .past .three-column .yrtext{
+            text-align: center;
+            color: rgb(18, 18, 18);
+            margin-top: 5px;
+        }
+        .past .three-column .img{
+            filter: grayscale(100);
+        }
+        .past .three-column .img:hover{
+            filter: grayscale(0);
+        }
+            .past .three-column .year22 .img{
+                background-image: url(../images/p.event1.png);
+            }
+            .past .three-column .year21 .img{
+                background-image: url(../images/p.event8.png);
+            }
+            .past .three-column .year20 .img {
+                background-image: url(../images/2020.1.jpeg);
+            }
+            .past .three-column .year19 .img{
+                background-image: url(../images/2019.1.png);
+            }
+            .past .three-column .year18 .img {
+                background-image: url(../images/2018.1.jpeg);
+            }
+            .past .three-column .year17 .img{
+                background-image: url(../images/2017.1.jpeg);
+            }
+
     }
-    @media (min-width:600px) {
+    @media (min-width:768px) {
         .three-column {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
@@ -625,59 +720,65 @@ body, html {
             color:#f27175;
         }
     }
-    @media (min-width:780px) {
+    @media (min-width:768px) {
         .two-column .patron-content p{
             column-count: 2;
             column-gap: 3em;
         }
     }
 
-/*Events Grid*/ 
+/*4 column Grid*/ 
     @media (min-width:0px) {
         .events-grid {
             display: grid;
             grid-template-columns: 50% 50%;
-            gap: 2em;
-            margin-top: 3em;
+            gap: .5em;
+            margin-top: 2em;
         }
         .events-grid div {
             align-items: center;
             justify-content: center;
-            padding: 1em;
+            padding: 0.5em;
             height: 15em;
+            background-size: cover;
         }
         .events-grid div p {
             display: none;
         }
         .events-grid div h2{
             line-height: 18px;
+            font-size: 14px;
         }
         .events-grid .n-event1 {
             background-image: url(../images/n.event1.png);
-            background-size: cover;
             background-repeat: none;
-        }
-        .events-grid .n-event1text {
-            background-color: #fce484;
         }
         .events-grid .n-event2 {
             background-image: url(../images/n.event2.jpeg);
-            background-size: cover;
         }
         .events-grid .n-event3 {
             background-image: url(../images/n.event3.png);
-            background-size: cover;
         }
         .events .button1 {
             position: absolute;
             bottom: 10px;
         }
+        #buildings-content .n-event-text div p{
+            display: block;
+        }
+        .events-grid .build-1 {
+            background-image: url(../images/build1.png);
+        }
     }
+    
     @media (min-width:900px) {
         .events-grid {
             grid-template-columns: 1fr 1fr 1fr 1fr;
             gap: 2em;
             margin-top: 3em;
+        }
+        .events-grid div h2{
+            font-size: 18px;
         }
         .events-grid div p {
             display: block;
@@ -690,14 +791,13 @@ body, html {
             grid-column-end: 3;
         }
         .events-grid .n-event1text {
-            background-color: #fce484;
             grid-column-start: 3;
             grid-column-end: 5;
         }
     }
 
 /*Responsive Footer*/
-    @media (min-width:601px) {
+    @media (min-width:768px) {
         footer {
             background-color: rgb(18, 18, 18);
             background-size: cover;
@@ -734,7 +834,7 @@ body, html {
         }
     }
 
-    @media (max-width:1280px){
+    @media (max-width:1024px){
         footer .footer_img {
             display: none;
         }
