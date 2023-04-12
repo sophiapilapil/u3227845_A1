@@ -1,4 +1,8 @@
-
+/*Note that the dimensions that I catered to were 
+    mobile (width of 425px), 
+    tablet (width of 768px) & 
+    desktop (width of 1024px)
+*/
 header {
     background-color: transparent;
     height: 0%;
@@ -26,6 +30,23 @@ h2 {
         font-style: italic;
         line-height: 20px;
     }
+
+/*Pull Quotes*/ 
+    @media (min-width:0px) {
+        h5{
+            font-family: mrs-eaves, serif;
+            font-style: italic;
+            font-weight: 400;
+            font-size: 18px;
+            color: #f27175;
+        }
+    }
+    @media (min-width:900px) {
+        h5{
+            font-size: 28px;
+        }
+    }
+
 .inner {
    width: 75%;
    margin: 0 auto;
@@ -95,7 +116,7 @@ body, html {
     }
 
 
-/* Paralax image */
+/* Landing page paralax image */
     .hero {
         background-image: url("../images/event1.jpg");
         height: 100%;
@@ -103,7 +124,6 @@ body, html {
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        color:whitesmoke;
     }
 
 
@@ -115,6 +135,7 @@ body, html {
             text-align: center;
             margin: 0 auto;
             padding: 6em;
+            color:whitesmoke;
         }
         .herocontent h1{
             text-transform: none;
@@ -133,6 +154,7 @@ body, html {
         }
         .herocontent .textbox{
             padding: 1em;
+            transition: 0.3s ease-out;
         }
     }
 
@@ -215,7 +237,7 @@ body, html {
                 color: rgb(18, 18, 18);
             }
             #next-event .herocontent h4 {
-                display: none;
+                display: block;
             }
             #next-event .herocontent h2 {
                 font-size: 12px;
@@ -250,9 +272,6 @@ body, html {
         #buildings .herocontent {
             color: whitesmoke
         }
-        #buildings .herocontent h4 {
-            display: none;
-        }
         #buidings .herocontent h2 {
             font-size: 12px;
         }
@@ -262,6 +281,15 @@ body, html {
         }
         #buildings .herocontent .textbox{
             background-color: #eca484;
+        }
+        #buildings .herocontent h4 {
+            display: block;
+        }
+        .inner .textbox {
+            width: 50%;
+            background-color: #eca484;
+            padding: 1em;
+            margin-top: 1em;
         }
     }
     @media (min-width:768px) {
@@ -274,6 +302,34 @@ body, html {
             font-size: 18px;
         }
     }
+     /*Members Page*/
+     @media (min-width:0px) {
+        #stars-of-cm {
+            background-image: url(../images/people2.png);
+        }
+        #stars-of-cm .textbox{
+            background-color: #f27175;
+        }
+        #stars-of-cm .two-btn{
+            display: flex;
+            margin-top: 5em;
+            justify-content: center;
+            gap: 1em;
+            
+        }
+        #stars-of-cm .button1 a:hover{
+            background-color: rgb(18, 18, 18);
+            color: #f27175;
+        }
+        #stars-of-cm #sign-up a{
+            background-color: whitesmoke;
+            color: #f27175;
+        }
+        #stars-of-cm #sign-up a:hover{
+            background-color: rgb(18, 18, 18);
+            color: #f27175;
+        }
+     }
 
 
 /* Responsive navbar*/
@@ -727,7 +783,7 @@ body, html {
         }
     }
 
-/*4 column Grid*/ 
+/*Four-column Grid*/ 
     @media (min-width:0px) {
         .events-grid {
             display: grid;
@@ -772,6 +828,7 @@ body, html {
         #buildings-content div p{
             display: block;
         }
+        /*Building Images*/
             .events-grid .build-1 {
                 background-image: url(../images/build1.png);
             }
@@ -795,6 +852,52 @@ body, html {
             }
             .events-grid .build-8 {
                 background-image: url(../images/build8.jpeg);
+            }
+            .events-grid .build-9 {
+                background-image: url(../images/build9.jpeg);
+            }
+            .events-grid .build-10 {
+                background-image: url(../images/build10.jpeg);
+            }
+            .events-grid .build-11 {
+                background-image: url(../images/build11.jpeg);
+            }
+            .events-grid .build-12 {
+                background-image: url(../images/build12.jpeg);
+            }
+            .events-grid .build-13 {
+                background-image: url(../images/build13.jpeg);
+            }
+            .events-grid .build-14 {
+                background-image: url(../images/build14.jpeg);
+            }
+            .events-grid .build-15 {
+                background-image: url(../images/build15.jpeg);
+            }
+            .events-grid .build-16 {
+                background-image: url(../images/build16.jpeg);
+            }
+            .events-grid .build-17 {
+                background-image: url(../images/build17.jpeg);
+            }
+            .events-grid .build-18 {
+                background-image: url(../images/build18.jpeg);
+            }
+            .events-grid .build-19 {
+                background-image: url(../images/build19.jpeg);
+            }
+            .events-grid .build-20 {
+                background-image: url(../images/build20.jpeg);
+            }
+        /*Stars of CM Images*/
+            .events-grid .story1 {
+                background-image: url(../images/build6.jpeg);
+            }
+            .events-grid .story2 {
+                background-image: url(../images/build13.jpeg);
+            }
+            .events-grid .story3 {
+                background-image: url(../images/build20.jpeg);
             }
     }
     
@@ -820,6 +923,12 @@ body, html {
         .events-grid .n-event1text {
             grid-column-start: 3;
             grid-column-end: 5;
+        }
+        .events-grid .story1 {
+            background-size: cover;
+            background-repeat: none;
+            grid-column-start: 1;
+            grid-column-end: 3;;
         }
     }
 
