@@ -890,6 +890,9 @@ body, html {
                     background-image: url(../images/build20.jpeg);
                 }
             /*Stars of CM Images*/
+                #pics div:hover{
+                    opacity: 75%;
+                }
                 .events-grid .story1 {
                     background-image: url(../images/build6.jpeg);
                 }
@@ -918,6 +921,8 @@ body, html {
                 }
                 .events-grid .pics6 {
                     background-image: url(../images/pics6.jpeg);
+                    grid-column-start: 1;
+                    grid-column-end: 3;
                 }.events-grid .pics7 {
                     background-image: url(../images/pics7.jpeg);
                 }
@@ -926,6 +931,8 @@ body, html {
                 }
                 .events-grid .pics9 {
                     background-image: url(../images/pic9.jpeg);
+                    grid-column-start: 1;
+                    grid-column-end: 3;
                 }
 
         }
@@ -970,10 +977,19 @@ body, html {
                 grid-column-end: 3;
                 background-position-y: center;
             }
+            .events-grid .pics6 {
+                grid-column-start: 4;
+                grid-column-end: 5;
+                background-position-y: center;
+            }
             .events-grid .pics8 {
                 grid-column-start: 2;
                 grid-column-end: 4;
                 background-position-y: center;
+            }
+            .events-grid .pics9 {
+                grid-column-start: 4;
+                grid-column-end: 5;
             }
         }
 
