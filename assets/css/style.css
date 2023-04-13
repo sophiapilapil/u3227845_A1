@@ -521,6 +521,10 @@ body, html {
             text-align: center;
             margin: 0 auto;
         }
+        .sec1 b{
+            font-weight: bolder;
+            color: #f27175;
+        }
         .sec1 p{
             background-color: whitesmoke;
             height: 10em;
@@ -552,11 +556,6 @@ body, html {
             margin-bottom:.5em;
         }
     }
-
-.sec1 b{
-    font-weight: bolder;
-    color: #f27175;
-}
 
 /* CSS Grid */
     @media (min-width:0px) {
@@ -784,153 +783,199 @@ body, html {
     }
 
 /*Four-column Grid*/ 
-    @media (min-width:0px) {
-        .events-grid {
-            display: grid;
-            grid-template-columns: 50% 50%;
-            gap: .5em;
-            margin-top: 2em;
+    /*Events Grid - The foundation grid*/ 
+        @media (min-width:0px) {
+            .events-grid {
+                display: grid;
+                grid-template-columns: 50% 50%;
+                gap: .5em;
+                margin-top: 2em;
+            }
+            .events-grid div {
+                align-items: center;
+                justify-content: center;
+                padding: 0.5em;
+                height: 15em;
+                background-size: cover;
+            }
+            .events-grid div p {
+                display: none;
+            }
+            .events-grid div h2{
+                line-height: 18px;
+                font-size: 14px;
+            }
+            .events-grid .n-event1 {
+                background-image: url(../images/n.event1.png);
+                background-repeat: none;
+            }
+            .events-grid .n-event2 {
+                background-image: url(../images/n.event2.jpeg);
+            }
+            .events-grid .n-event3 {
+                background-image: url(../images/n.event3.png);
+            }
+            .events .button1 {
+                position: absolute;
+                bottom: 10px;
+            }
+            #buildings-content div {
+                height: 10em;
+            }
+            .events-grid #at-risk {
+                background-color: #eca484;
+            }
+            #buildings-content div p{
+                display: block;
+            }
+            /*Building Images*/
+                .events-grid .build-1 {
+                    background-image: url(../images/build1.png);
+                }
+                .events-grid .build-2 {
+                    background-image: url(../images/build2.jpeg);
+                }
+                .events-grid .build-3 {
+                    background-image: url(../images/build3.jpeg);
+                }
+                .events-grid .build-4 {
+                    background-image: url(../images/build4.jpg);
+                }
+                .events-grid .build-5 {
+                    background-image: url(../images/build5.jpeg);
+                }
+                .events-grid .build-6 {
+                    background-image: url(../images/build6.jpeg);
+                }
+                .events-grid .build-7 {
+                    background-image: url(../images/build7.jpeg);
+                }
+                .events-grid .build-8 {
+                    background-image: url(../images/build8.jpeg);
+                }
+                .events-grid .build-9 {
+                    background-image: url(../images/build9.jpeg);
+                }
+                .events-grid .build-10 {
+                    background-image: url(../images/build10.jpeg);
+                }
+                .events-grid .build-11 {
+                    background-image: url(../images/build11.jpeg);
+                }
+                .events-grid .build-12 {
+                    background-image: url(../images/build12.jpeg);
+                }
+                .events-grid .build-13 {
+                    background-image: url(../images/build13.jpeg);
+                }
+                .events-grid .build-14 {
+                    background-image: url(../images/build14.jpeg);
+                }
+                .events-grid .build-15 {
+                    background-image: url(../images/build15.jpeg);
+                }
+                .events-grid .build-16 {
+                    background-image: url(../images/build16.jpeg);
+                }
+                .events-grid .build-17 {
+                    background-image: url(../images/build17.jpeg);
+                }
+                .events-grid .build-18 {
+                    background-image: url(../images/build18.jpeg);
+                }
+                .events-grid .build-19 {
+                    background-image: url(../images/build19.jpeg);
+                }
+                .events-grid .build-20 {
+                    background-image: url(../images/build20.jpeg);
+                }
+            /*Stars of CM Images*/
+                .events-grid .story1 {
+                    background-image: url(../images/build6.jpeg);
+                }
+                .events-grid .story2 {
+                    background-image: url(../images/build13.jpeg);
+                }
+                .events-grid .story3 {
+                    background-image: url(../images/build20.jpeg);
+                }
+                .events-grid .pics1 {
+                    background-image: url(../images/pics1.jpeg);
+                }
+                .events-grid .pics2 {
+                    background-image: url(../images/pics2.jpeg);
+                }
+                .events-grid .pics3 {
+                    background-image: url(../images/pics3.jpeg);
+                    grid-column-start: 1;
+                    grid-column-end: 3;
+                }
+                .events-grid .pics4 {
+                    background-image: url(../images/pics4.jpeg);
+                }
+                .events-grid .pics5 {
+                    background-image: url(../images/pics5.jpeg);
+                }
+                .events-grid .pics6 {
+                    background-image: url(../images/pics6.jpeg);
+                }.events-grid .pics7 {
+                    background-image: url(../images/pics7.jpeg);
+                }
+                .events-grid .pics8 {
+                    background-image: url(../images/pics8.jpeg);
+                }
+                .events-grid .pics9 {
+                    background-image: url(../images/pic9.jpeg);
+                }
+
         }
-        .events-grid div {
-            align-items: center;
-            justify-content: center;
-            padding: 0.5em;
-            height: 15em;
-            background-size: cover;
-        }
-        .events-grid div p {
-            display: none;
-        }
-        .events-grid div h2{
-            line-height: 18px;
-            font-size: 14px;
-        }
-        .events-grid .n-event1 {
-            background-image: url(../images/n.event1.png);
-            background-repeat: none;
-        }
-        .events-grid .n-event2 {
-            background-image: url(../images/n.event2.jpeg);
-        }
-        .events-grid .n-event3 {
-            background-image: url(../images/n.event3.png);
-        }
-        .events .button1 {
-            position: absolute;
-            bottom: 10px;
-        }
-        #buildings-content div {
-            height: 10em;
-        }
-        .events-grid #at-risk {
-            background-color: #eca484;
-        }
-        #buildings-content div p{
-            display: block;
-        }
-        /*Building Images*/
-            .events-grid .build-1 {
-                background-image: url(../images/build1.png);
+        
+        @media (min-width:900px) {
+            .events-grid {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                gap: 2em;
+                margin-top: 3em;
             }
-            .events-grid .build-2 {
-                background-image: url(../images/build2.jpeg);
+            .events-grid div h2{
+                font-size: 18px;
             }
-            .events-grid .build-3 {
-                background-image: url(../images/build3.jpeg);
+            .events-grid div p {
+                display: block;
             }
-            .events-grid .build-4 {
-                background-image: url(../images/build4.jpg);
+            .events-grid .n-event1 {
+                background-image: url(../images/n.event1.png);
+                background-size: cover;
+                background-repeat: none;
+                grid-column-start: 1;
+                grid-column-end: 3;
             }
-            .events-grid .build-5 {
-                background-image: url(../images/build5.jpeg);
+            .events-grid .n-event1text {
+                grid-column-start: 3;
+                grid-column-end: 5;
             }
-            .events-grid .build-6 {
-                background-image: url(../images/build6.jpeg);
-            }
-            .events-grid .build-7 {
-                background-image: url(../images/build7.jpeg);
-            }
-            .events-grid .build-8 {
-                background-image: url(../images/build8.jpeg);
-            }
-            .events-grid .build-9 {
-                background-image: url(../images/build9.jpeg);
-            }
-            .events-grid .build-10 {
-                background-image: url(../images/build10.jpeg);
-            }
-            .events-grid .build-11 {
-                background-image: url(../images/build11.jpeg);
-            }
-            .events-grid .build-12 {
-                background-image: url(../images/build12.jpeg);
-            }
-            .events-grid .build-13 {
-                background-image: url(../images/build13.jpeg);
-            }
-            .events-grid .build-14 {
-                background-image: url(../images/build14.jpeg);
-            }
-            .events-grid .build-15 {
-                background-image: url(../images/build15.jpeg);
-            }
-            .events-grid .build-16 {
-                background-image: url(../images/build16.jpeg);
-            }
-            .events-grid .build-17 {
-                background-image: url(../images/build17.jpeg);
-            }
-            .events-grid .build-18 {
-                background-image: url(../images/build18.jpeg);
-            }
-            .events-grid .build-19 {
-                background-image: url(../images/build19.jpeg);
-            }
-            .events-grid .build-20 {
-                background-image: url(../images/build20.jpeg);
-            }
-        /*Stars of CM Images*/
             .events-grid .story1 {
-                background-image: url(../images/build6.jpeg);
+                background-size: cover;
+                background-repeat: none;
+                grid-column-start: 1;
+                grid-column-end: 3;;
             }
-            .events-grid .story2 {
-                background-image: url(../images/build13.jpeg);
+            .events-grid .pics3 {
+                background-image: url(../images/pics3.jpeg);
+                grid-column-start: 3;
+                grid-column-end: 5;
+                background-position-y: center;
             }
-            .events-grid .story3 {
-                background-image: url(../images/build20.jpeg);
+            .events-grid .pics4 {
+                grid-column-start: 1;
+                grid-column-end: 3;
+                background-position-y: center;
             }
-    }
-    
-    @media (min-width:900px) {
-        .events-grid {
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            gap: 2em;
-            margin-top: 3em;
+            .events-grid .pics8 {
+                grid-column-start: 2;
+                grid-column-end: 4;
+                background-position-y: center;
+            }
         }
-        .events-grid div h2{
-            font-size: 18px;
-        }
-        .events-grid div p {
-            display: block;
-        }
-        .events-grid .n-event1 {
-            background-image: url(../images/n.event1.png);
-            background-size: cover;
-            background-repeat: none;
-            grid-column-start: 1;
-            grid-column-end: 3;
-        }
-        .events-grid .n-event1text {
-            grid-column-start: 3;
-            grid-column-end: 5;
-        }
-        .events-grid .story1 {
-            background-size: cover;
-            background-repeat: none;
-            grid-column-start: 1;
-            grid-column-end: 3;;
-        }
-    }
 
 /*Responsive Footer*/
     @media (min-width:768px) {
