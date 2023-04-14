@@ -76,6 +76,7 @@ body {
         }
     }
 
+/* Margins for the main content divs */
 .inner {
    width: 75%;
    margin: 0 auto;
@@ -98,7 +99,6 @@ body, html {
         padding:10px;
         line-height: 13px;
     }
-
     .button1 a:hover {
         background-color: #f27175;
         color:white;
@@ -149,10 +149,10 @@ body, html {
         font-size: 12px;
     }
 
-.back-btn:hover {
-    color: rgb(18,18,18);
-    cursor: pointer;
-}
+    .back-btn:hover {
+        color: rgb(18,18,18);
+        cursor: pointer;
+    }
 
 /* Landing page hero content - foundation for paralax images */
     .hero {
@@ -1012,16 +1012,16 @@ body, html {
     @media (min-width:0px){
         .signing-page {
             transition: 0.5s ease-in;
+            max-height: 100% ;
         }
         hr {
             border: none;
-            margin-bottom: 25px;
           }
         .close {
         position: absolute;
         padding: 15px;
         right: 0.2em;
-        top: 15px;
+        top: 10px;
         font-size: 40px;
         color: #f1f1f1;
         }
@@ -1032,7 +1032,7 @@ body, html {
         input[type=text], input[type=password] {
             width: 100%;
             padding: 15px;
-            margin: 5px 0 22px 0;
+            margin: 5px;
             display: inline-block;
             border: none;
             background: #f1f1f1;
