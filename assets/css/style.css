@@ -385,7 +385,7 @@ body, html {
         }
         
         #logo_hover:hover {
-            content:url("../images/canberra\ modern\ FILL\ W.png");
+            content:url("../images/canberra-modern-FILL-W.png");
         }
         .menu li {
             display: inline;
@@ -836,7 +836,7 @@ body, html {
             #buildings-content div {
                 height: 10em;
             }
-            .events-grid #at-risk {
+            .events-grid .at-risk {
                 background-color: #eca484;
             }
             #buildings-content div p{
